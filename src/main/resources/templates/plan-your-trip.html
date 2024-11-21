@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip - Puducherry Tourism</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/plan-your-trip.css"> <!-- Link to the updated CSS file -->
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Puducherry Tourism</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/destinations">Destinations</a></li>
+                <li><a href="/things-to-explore">Things to Explore</a></li>
+                <li><a href="/plan-your-trip" class="active">Plan Your Trip</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/map">Map</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/language-selection">Language</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Plan Your Trip Section -->
+    <section class="plan-trip">
+        <h2>Plan Your Visit to Puducherry</h2>
+        <p>Fill out the form to plan your perfect trip to Puducherry.</p>
+        
+        <!-- Plan Your Trip Form -->
+        <form action="#" method="POST">
+            <label for="arrival-date">Arrival Date:</label>
+            <input type="date" id="arrival-date" name="arrival-date" required>
+
+            <label for="departure-date">Departure Date:</label>
+            <input type="date" id="departure-date" name="departure-date" required>
+
+            <label for="itinerary">Itinerary:</label>
+            <textarea id="itinerary" name="itinerary" placeholder="Plan your activities..." rows="4"></textarea>
+
+            <button type="submit" class="btn-submit">Submit Plan</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Puducherry Tourism Guide | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

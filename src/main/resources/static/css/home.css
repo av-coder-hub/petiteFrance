@@ -1,0 +1,151 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff9e6; /* Light yellow background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #3F51B5; /* French Blue */
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FF6F61; /* Coral Pink */
+}
+
+nav .logo h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    background-color: #009688; /* Sea Green */
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('/images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.cta-btn {
+    background-color: #FF5722; /* Vibrant Orange */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #3F51B5; /* Hover to French Blue */
+}
+
+/* Destinations Section */
+.destinations {
+    padding: 40px 20px;
+    background-color: #F4C300; /* Bright Yellow */
+    text-align: center;
+}
+
+.destinations h2 {
+    font-size: 2rem;
+    color: #3F51B5; /* French Blue */
+    margin-bottom: 20px;
+}
+
+.destination-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination-card img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    color: #FF5722; /* Vibrant Orange */
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.destination-card p {
+    color: #777;
+    font-size: 1rem;
+}
+
+.destination-card:hover {
+    transform: scale(1.05); /* Card hover effect */
+}
+
+/* Footer Section */
+footer {
+    background-color: #3F51B5; /* French Blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

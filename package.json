@@ -1,0 +1,19 @@
+{
+  "name": "petitefrance",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "A Vagini",
+  "license": "ISC",
+  "description": "A tourism guide for Puducherry",
+  "keywords": [
+    "Puducherry",
+    "tourism"
+  ],
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

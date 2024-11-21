@@ -1,0 +1,140 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff9e6; /* Light yellow background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #3F51B5; /* French Blue */
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FF6F61; /* Coral Pink */
+}
+
+nav .logo h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    background-color: #009688; /* Sea Green */
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.nav-links .active {
+    background-color: #FF5722; /* Vibrant Orange */
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Plan Your Trip Section */
+.plan-trip {
+    padding: 40px 20px;
+    background-color: #F4C300; /* Bright Yellow */
+    text-align: center;
+}
+
+.plan-trip h2 {
+    font-size: 2.2rem;
+    color: #3F51B5; /* French Blue */
+    margin-bottom: 20px;
+}
+
+.plan-trip p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+form input[type="date"]:focus, form textarea:focus {
+    border-color: #3F51B5; /* French Blue on focus */
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form .btn-submit {
+    background-color: #FF5722; /* Vibrant Orange */
+    color: white;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form .btn-submit:hover {
+    background-color: #FF6F61; /* Coral Pink */
+}
+
+/* Footer Section */
+footer {
+    background-color: #3F51B5; /* French Blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
