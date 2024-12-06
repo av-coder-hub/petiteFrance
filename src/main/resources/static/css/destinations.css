@@ -81,6 +81,7 @@ nav .logo h1 {
     margin-bottom: 30px;
 }
 
+/* Destination List Styling */
 .destination-list {
     display: flex;
     flex-wrap: wrap;
@@ -89,36 +90,39 @@ nav .logo h1 {
 }
 
 /* Destination Card */
-.destination-card {
+.destination-item {
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slightly refined box shadow */
-    width: 250px;
-    text-align: center;
+    border: 1px solid #ccc; /* Border for the card */
+    border-radius: 8px;
     padding: 20px;
+    margin-bottom: 20px;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
-.destination-card:hover {
-    transform: translateY(-10px);
+.destination-item:hover {
+    transform: translateY(-10px); /* Hover effect */
 }
 
-.destination-card img {
-    width: 100%;
+.destination-image {
+    max-width: 100%;
+    border-radius: 8px;
     height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+    object-fit: cover; /* Keeps aspect ratio intact */
 }
 
-.destination-card h3 {
+.destination-item h3 {
     font-size: 1.5rem;
     color: #FF5722; /* Vibrant Orange */
     margin-top: 10px;
 }
 
-.destination-card p {
+.destination-item p {
     font-size: 1.1rem;
-    color: #333;
+    color: #555; /* Slightly lighter color for text */
 }
 
 /* Spinner Styles */
@@ -162,7 +166,7 @@ footer {
         gap: 20px;
     }
 
-    .destination-card {
+    .destination-item {
         width: 90%;
         margin: 0 auto;
     }

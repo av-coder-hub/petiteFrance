@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puducherry Destinations</title>
+    <style>
+        /* Add some basic styling */
+        .destination-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .destination-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+        .destination-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Puducherry Beaches</h1>
+    <div id="destination-container" class="destination-list"></div>
+
+    <script>
+        // Fetch data from the API
+        async function fetchDestinations() {
+            try {
+                const response = await fetch('http://localhost:3000/api/destinations/Puducherry/Beaches');
+                const destinations = await response.json();
+
+                // Get the container to display the destinations
+                const container = document.getElementById('destination-container');
+
+                // Loop through the destinations and create HTML for each
+                destinations.forEach(destination => {
+                    const card = document.createElement('div');
+                    card.classList.add('destination-card');
+
+                    // Add the destination data into the card
+                    card.innerHTML = `
+                        <img src="${destination.image_url}" alt="${destination.name}">
+                        <h3>${destination.name}</h3>
+                        <p>${destination.description}</p>
+                    `;
+
+                    // Append the card to the container
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error fetching destinations:', error);
+            }
+        }
+
+        // Call the function to fetch and display destinations when the page loads
+        window.onload = fetchDestinations;
+    </script>
+</body>
+</html>

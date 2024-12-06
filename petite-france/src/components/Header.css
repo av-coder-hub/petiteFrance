@@ -1,0 +1,90 @@
+/* Ensures the video covers the background */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video fills the container */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%; /* Vertically center the text */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: white;
+  text-align: center;
+  z-index: 2; /* Ensures the text is above the video */
+}
+
+.video-tagline {
+  font-size: 3rem; /* Large font for the tagline */
+  font-weight: bold;
+  margin: 0;
+}
+
+.video-desc {
+  font-size: 1.5rem; /* Smaller font for the description */
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Header Section (Navbar) */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 20px; /* Position navbar slightly down to prevent overlap with the video */
+  width: 100%;
+  background-color: #333;
+  padding: 1px;
+  z-index: 3; /* Keep navbar above video */
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-item a:hover {
+  color: #f0a500;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}

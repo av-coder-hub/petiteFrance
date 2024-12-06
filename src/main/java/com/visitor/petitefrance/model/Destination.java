@@ -1,47 +1,69 @@
 package com.visitor.petitefrance.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
-@Entity
+@Document(collection = "destinations") // Maps this class to the "destinations" collection
 public class Destination {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @NotBlank(message = "Name is required")      // Ensure that name is not empty
-    private String name;            // Name of the destination
-    private String tagline;         // Short tagline (Nature, Culture, Heritage, etc.)
-    
-    @Size(min = 10, max = 500, message = "Description must be between 10 and 500 characters")  // Enforce description length
-    private String description;     // Detailed description of the destination
+    private String id; // Use String to represent MongoDB's ObjectId
 
-    @Pattern(regexp = "^(http|https)://.*$", message = "Invalid URL format")  // Ensure imageUrl is a valid URL
-    private String imageUrl;        // URL or path to an image of the destination
+    @NotBlank(message = "district is required")
+    private String district;
 
-    @NotBlank(message = "State is required") // Ensure state is not empty
-    private String state;          // New field for region (Puducherry, Karaikal, etc.)
+    @NotBlank(message = "Name is required")
+    private String name;
 
-    public enum Category {
-        NATURE, RELIGIOUS, HERITAGE;
-    }
-    
-    @Pattern(regexp = "^(NATURE|RELIGIOUS|HERITAGE)$", message = "Invalid category")
+    @Size(max = 100, message = "Location must be at most 100 characters")
+    private String location;
+
+    @Size(max = 50, message = "Temperature information must be at most 50 characters")
+    private Double temperature;
+
+    @Size(max = 100, message = "Tagline must be at most 100 characters")
+    private String tagline;
+
+    @Size(min = 10, max = 500, message = "Description must be between 10 and 500 characters")
+    private String description;
+
+    @Pattern(regexp = "^(http|https)://.*$", message = "Invalid URL format")
+    private String imageUrl;
+
+    @NotBlank(message = "Category is required")
+    @Pattern(regexp = "^(NATURE|RELIGIOUS|HERITAGE)$", message = "Category must be one of: NATURE, RELIGIOUS, HERITAGE")
     private String category;
-    
-    private String location;        // Location or area name for the destination
-    private String temperature;     // (Optional) Temperature or weather info
 
-    public Long getId() {
+    // Default no-args constructor (required by frameworks like Spring)
+    public Destination() {}
+
+    // All-arguments constructor (for easier instantiation)
+    public Destination(String district, String name, String location, Double temperature, String tagline, String description, String imageUrl, String category) {
+        this.district = district;
+        this.name = name;
+        this.location = location;
+        this.temperature = temperature;
+        this.tagline = tagline;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.category = category;        
+    }
+
+    public Destination(String district, String name, String imageUrl) {
+        this.district = district;
+        this.name = name;
+        this.imageUrl = imageUrl;
+    }
+
+    // Getters and Setters
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -77,12 +99,12 @@ public class Destination {
         this.imageUrl = imageUrl;
     }
 
-    public String getState() {
-        return state;
+    public String getDistrict() {
+        return district;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setDistrict(String district) {
+        this.district = district;
     }
 
     public String getCategory() {
@@ -101,11 +123,11 @@ public class Destination {
         this.location = location;
     }
 
-    public String getTemperature() {
+    public Double getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(String temperature) {
+    public void setTemperature(Double temperature) {
         this.temperature = temperature;
     }
 }

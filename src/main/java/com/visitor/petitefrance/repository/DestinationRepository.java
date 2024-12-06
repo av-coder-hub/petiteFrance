@@ -2,20 +2,13 @@ package com.visitor.petitefrance.repository;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.visitor.petitefrance.model.Destination;    
+import com.visitor.petitefrance.model.Destination;
 
-public interface DestinationRepository extends JpaRepository<Destination, Long> {
+public interface DestinationRepository extends MongoRepository<Destination, String> {
+    // Find destinations by district
+    List<Destination> findByDistrict(String district);
     
-    // Find destinations by state (e.g., Puducherry, Karaikal, etc.)
-    List<Destination> findByState(String state);
-
-    // Find categories by state (we assume the category is part of the Destination model)
-    List<String> findCategoriesByState(String state);
-
-    // Find destinations by state and category (e.g., Nature, Heritage, etc.)
-    List<Destination> findByStateAndCategory(String state, String category);
-
-    public List<Destination> findDestinationsByStateAndCategory(String state, String category);
+    List<Destination> findByCategory(String category);
 }
