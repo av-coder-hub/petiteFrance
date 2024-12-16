@@ -12,8 +12,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable()) // Disabling CSRF protection
             .authorizeHttpRequests(auth -> auth
-                .anyRequest().permitAll() // Allow all requests
-            );
+                .anyRequest().permitAll() // Allow all requests without authentication
+            )
+            .formLogin().disable() // Disable form login
+            .httpBasic().disable(); // Disable basic authentication
         return http.build();
     }
 }

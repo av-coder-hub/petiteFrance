@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation'; /* If you're using navigation */
 import 'swiper/css/pagination'; /* If you're using pagination */
-import './EventSection.css'; // Your custom styles
+import './../styles/EventSection.css'; // Your custom styles
 import eventImage1 from '../assets/event-image1.jpg';
 import eventImage2 from '../assets/event-image2.jpg';
 import eventImage3 from '../assets/event-image3.jpg';

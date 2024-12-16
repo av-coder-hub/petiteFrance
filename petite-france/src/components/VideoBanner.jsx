@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./VideoBanner.css";
+import "./../styles/VideoBanner.css";
 import video from "../assets/pondicherry-loop.mp4"; // Import your video file
 
 function VideoBanner() {

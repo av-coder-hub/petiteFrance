@@ -1,0 +1,68 @@
+/* General styles */
+.trip-summary {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.day-summary {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.destination-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.destination-summary span {
+  font-weight: bold;
+}
+
+.progress-bar-container {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 5px;
+  background-color: lightblue;
+}
+
+/* Styles for visited and not-visited destinations */
+.not-visited-btn {
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.visited-btn {
+  background-color: #5bc0de;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.not-visited {
+  color: #102802;
+}
+
+.visited {
+  color: #5f1073;
+}

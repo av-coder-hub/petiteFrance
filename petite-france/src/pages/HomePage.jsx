@@ -1,5 +1,5 @@
 import React from "react";
-import './HomePage.css';
+import './../styles/HomePage.css';
 import VideoBanner from "../components/VideoBanner";
 import EventSection from "../components/EventSection";
 

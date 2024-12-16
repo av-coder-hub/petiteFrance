@@ -1,0 +1,160 @@
+/* Full-page banner image */
+.district-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;  /* Adjust the height of the banner */
+    overflow: hidden;
+  }
+  
+  .district-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the banner area */
+    object-position: center;
+    opacity: 0.7; /* Optional: Add opacity for a smoother overlay */
+  }
+  
+  /* Title and tagline on top of the banner */
+  /* Title and tagline on top of the banner */
+.district-banner h1, .district-banner p {
+    position: absolute;
+    left: 20px;
+    color: white;
+    z-index: 2;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .district-banner h1 {
+    font-size: 3rem;
+    margin: 0;
+    bottom: 60px;  /* Adjusted to move the heading up */
+  }
+  
+  .district-banner p {
+    font-size: 1.5rem;
+    bottom: 20px;  /* Adjusted to keep tagline closer to the bottom */
+  }
+  
+  /* District Info Section */
+  .district-info {
+    margin: 30px 0;
+    padding: 0 20px;
+  }
+  
+  .district-info h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .district-info p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Destinations Section */
+  .destinations-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .destinations-section h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid for Destinations */
+  .destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images in a row */
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Container for the destination card */
+.destination-card {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Destination image styling */
+  .destination-image {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+  }
+  
+  /* Info below the image */
+  .destination-info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Left side: Name and Location */
+  .destination-info-left {
+    flex: 1 1 50%;
+  }
+  
+  .destination-info-left h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  .destination-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .destination-location span {
+    font-size: 1rem;
+  }
+  
+  /* Right side: Temperature and Category */
+  .destination-info-right {
+    flex: 1 1 50%;
+    text-align: right;
+  }
+  
+  .destination-temperature,
+  .destination-category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  
+  .destination-temperature span,
+  .destination-category span {
+    font-size: 1rem;
+  }
+  
+  /* Hover effect: Tagline and Description */
+  .destination-hover-info {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    color: white;
+    display: none;
+    text-align: justify;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .destination-card:hover .destination-hover-info {
+    display: block; /* Show on hover */
+  }
+  
+  /* Optional: Styling for the icons */
+  .icon-location, .icon-temperature, .icon-category {
+    font-size: 1.2rem;
+  }
+  

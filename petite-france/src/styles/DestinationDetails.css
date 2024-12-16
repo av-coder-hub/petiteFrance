@@ -1,0 +1,17 @@
+.destination-details {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .banner-text {
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+  

@@ -1,0 +1,80 @@
+.destination-card {
+    width: 320px;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.destination-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.destination-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover .destination-image {
+    transform: scale(1.1);
+}
+
+.destination-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.destination-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.destination-info .location {
+    color: #555;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.destination-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 12px;
+    width: 100%;
+    color: #555;
+}
+
+.destination-hover-description {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    font-size: 14px;
+}
+
+.destination-card:hover .destination-hover-description {
+    opacity: 1;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 16px;
+}

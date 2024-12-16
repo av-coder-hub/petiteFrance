@@ -1,27 +1,23 @@
 package com.visitor.petitefrance.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
+import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
-@Document(collection = "destinations") // Maps this class to the "destinations" collection
+@Embeddable
 public class Destination {
-    @Id
-    private String id; // Use String to represent MongoDB's ObjectId
-
-    @NotBlank(message = "district is required")
-    private String district;
-
+   
     @NotBlank(message = "Name is required")
     private String name;
 
     @Size(max = 100, message = "Location must be at most 100 characters")
     private String location;
 
-    @Size(max = 50, message = "Temperature information must be at most 50 characters")
+    @Min(value = -50, message = "Temperature cannot be less than -50°C")
+    @Max(value = 60, message = "Temperature cannot exceed 60°C")
     private Double temperature;
 
     @Size(max = 100, message = "Tagline must be at most 100 characters")
@@ -41,8 +37,7 @@ public class Destination {
     public Destination() {}
 
     // All-arguments constructor (for easier instantiation)
-    public Destination(String district, String name, String location, Double temperature, String tagline, String description, String imageUrl, String category) {
-        this.district = district;
+    public Destination(String name, String location, Double temperature, String tagline, String description, String imageUrl, String category) {
         this.name = name;
         this.location = location;
         this.temperature = temperature;
@@ -52,19 +47,9 @@ public class Destination {
         this.category = category;        
     }
 
-    public Destination(String district, String name, String imageUrl) {
-        this.district = district;
+    public Destination(String name, String imageUrl) {
         this.name = name;
         this.imageUrl = imageUrl;
-    }
-
-    // Getters and Setters
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -97,14 +82,6 @@ public class Destination {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-
-    public String getDistrict() {
-        return district;
-    }
-
-    public void setDistrict(String district) {
-        this.district = district;
     }
 
     public String getCategory() {
