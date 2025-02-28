@@ -1,8 +1,16 @@
 /* General styles */
 .trip-summary {
   font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
   margin: 20px;
 }
+
+.trip-summary h2 {
+  text-align: center;
+}
+
 
 .days-container {
   display: flex;
@@ -30,15 +38,33 @@
 }
 
 .progress-bar-container {
-  margin-top: 10px;
+  margin: 20px 0;
   width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.progress-bar-background {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  width: 100%;
+  height: 20px;
+  position: relative;
 }
 
 .progress-bar {
-  height: 10px;
-  border-radius: 5px;
-  background-color: lightblue;
+  background-color: #4caf50; /* Green color */
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.5s ease;
 }
+
+.progress-text {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
 
 /* Styles for visited and not-visited destinations */
 .not-visited-btn {

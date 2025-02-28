@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/destinations" element={<DestinationPage />} />
-        <Route path="/districts/:districtName" element={<DistrictDetailPage />} />
+        <Route path="/destinations/:districtName" element={<DistrictDetailPage />} />
         <Route path="/plan-your-trip" element={<PlanYourTrip />} />
         <Route path="/completion-page" element={<CompletionPage />} />
         <Route exact path="/" component={PlanYourTrip} />

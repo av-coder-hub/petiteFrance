@@ -3,10 +3,46 @@
   font-family: Arial, sans-serif;
 }
 
-.days-selection {
-  margin-bottom: 20px;
-  text-align: center;
+/* Center the Calendar */
+.date-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
+
+.react-calendar {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+.react-calendar__tile {
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.react-calendar__tile:hover {
+  background-color: #2a9d8f;
+  color: white;
+  border-radius: 8px;
+}
+
+.react-calendar__tile--active {
+  background-color: #264653;
+  color: #fff;
+}
+
+.days-planned {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #264653;
+}
+
 
 .destinations-list {
   display: flex;
@@ -98,4 +134,64 @@ h1, h2 {
   background: #f8f9fa;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* General Container */
+.destinations-container {
+  padding: 20px;
+}
+
+/* District Section */
+.district-section {
+  margin-bottom: 40px;
+}
+
+.district-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #444;
+}
+
+/* Grid Layout for Destinations */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* Space between items */
+  justify-content: center;
+}
+
+/* Destination Card Styling */
+.destination-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.destination-card.selected {
+  border: 3px solid #4caf50;
+}
+
+/* Destination Image */
+.destination-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Destination Name */
+.destination-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
 }

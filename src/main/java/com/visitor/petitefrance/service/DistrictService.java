@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.visitor.petitefrance.model.Destination;
 import com.visitor.petitefrance.model.District;
 import com.visitor.petitefrance.repository.DistrictRepository;
 
@@ -26,6 +27,17 @@ public class DistrictService {
     // Method to get a district by name (to fetch district with destinations for /districts/{districtname})
     public Optional<District> getDistrictByName(String name) {
         return districtRepository.findByNameIgnoreCase(name.toLowerCase());
+    }
+
+    public boolean addDestinationToDistrict(String districtId, Destination newDestination) {
+        Optional<District> districtOptional = districtRepository.findById(districtId);
+        if (districtOptional.isPresent()) {
+            District district = districtOptional.get();
+            district.getDestinations().add(newDestination); // Add the new destination to the list
+            districtRepository.save(district); // Save the updated district back to the database
+            return true;
+        }
+        return false;
     }
 }
 

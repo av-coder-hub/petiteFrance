@@ -7,9 +7,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.visitor.petitefrance.model.Destination;
 import com.visitor.petitefrance.model.District;
 import com.visitor.petitefrance.service.DistrictService;
 
@@ -45,6 +48,18 @@ public class DistrictController {
         return districtService.getDistrictByName(name.toLowerCase())
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @PostMapping("/{districtId}/addDestination")
+    public ResponseEntity<String> addDestination(
+            @PathVariable String districtId,
+            @RequestBody Destination newDestination) {
+        boolean isAdded = districtService.addDestinationToDistrict(districtId, newDestination);
+        if (isAdded) {
+            return ResponseEntity.ok("Destination added successfully!");
+        } else {
+            return ResponseEntity.badRequest().body("Failed to add destination.");
+        }
     }
 }
 
