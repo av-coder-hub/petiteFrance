@@ -7,7 +7,7 @@
 Here are some screenshots from the "Explore Petite France" web application:
 
 ### 🏠 Homepage
-![Homepage](petiteFrance/homepage.png)
+![Homepage](/homepage.png)
 
 ### 🗺️ District View
 ![District Page](petiteFrance/districtpage.png)
