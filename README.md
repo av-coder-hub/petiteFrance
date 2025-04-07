@@ -2,7 +2,27 @@
 
 **A Modern Trip Planning Web App** for exploring the beautiful French territories of Puducherry, Karaikal, and Mahe. Built using **React**, **Spring Boot**, and **MongoDB** with API integrations and map support.
 
-![Explore Petite France](assets/project-screenshot.png)
+## 🖼️ Project Screenshots
+
+Here are some screenshots from the "Explore Petite France" web application:
+
+### 🏠 Homepage
+![Homepage](petiteFrance/homepage.png)
+
+### 🗺️ District View
+![District Page](petiteFrance/districtpage.png)
+
+### 🧭 Itinerary Planner
+![Itinerary Planner](petiteFrance/itineraryplanner.png)
+
+### 📍 Map View
+![Map](petiteFrance/map.png)
+
+### 🎊 Events Occurring
+![Events Occurring](petiteFrance/eventsoccuring.png)
+
+### 🌍 Destinations at Puducherry
+![Destinations at Puducherry](petiteFrance/destinationsatpy.png)
 
 ---
 
