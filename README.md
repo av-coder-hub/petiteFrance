@@ -10,19 +10,19 @@ Here are some screenshots from the "Explore Petite France" web application:
 ![Homepage](/homepage.png)
 
 ### 🗺️ District View
-![District Page](petiteFrance/districtpage.png)
+![District Page](/districtpage.png)
 
 ### 🧭 Itinerary Planner
-![Itinerary Planner](petiteFrance/itineraryplanner.png)
+![Itinerary Planner](/itineraryplanner.png)
 
 ### 📍 Map View
-![Map](petiteFrance/map.png)
+![Map](/map.png)
 
 ### 🎊 Events Occurring
-![Events Occurring](petiteFrance/eventsoccuring.png)
+![Events Occurring](/eventsoccuring.png)
 
 ### 🌍 Destinations at Puducherry
-![Destinations at Puducherry](petiteFrance/destinationsatpy.png)
+![Destinations at Puducherry](/destinationsatpy.png)
 
 ---
 
