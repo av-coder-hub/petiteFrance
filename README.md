@@ -1,54 +1,93 @@
 # 🌍 Explore Petite France – Global Kin Project
 
-**A Modern Trip Planning Web App** for exploring the beautiful French territories of Puducherry, Karaikal, and Mahe. Built using **React**, **Spring Boot**, and **MongoDB** with API integrations and map support.
+A modern, interactive **Trip Planning Web App** designed to explore the charming French territories of **Puducherry**, **Karaikal**, and **Mahe** in India. Built with **React**, **Spring Boot**, and **MongoDB**, it offers rich visuals, map integration, and itinerary planning.
+
+---
 
 ## 🖼️ Project Screenshots
 
-Here are some screenshots from the "Explore Petite France" web application:
-
-### 🏠 Homepage
-![Homepage](/homepage.png)
-
-### 🗺️ District View
-![District Page](/districtpage.png)
-
-### 🧭 Itinerary Planner
-![Itinerary Planner](/itineraryplanner.png)
-
-### 📍 Map View
-![Map](/map.png)
-
-### 🎊 Events Occurring
-![Events Occurring](/eventsoccuring.png)
-
-### 🌍 Destinations at Puducherry
-![Destinations at Puducherry](/destinationsatpy.png)
+| Feature                  | Preview                                |
+|--------------------------|----------------------------------------|
+| 🏠 Homepage              | ![Homepage](/homepage.png)             |
+| 🗺️ District View         | ![District Page](/districtpage.png)    |
+| 🧭 Itinerary Planner     | ![Itinerary Planner](/itineraryplanner.png) |
+| 📍 Map View              | ![Map](/map.png)                       |
+| 🎊 Events Occurring      | ![Events Occurring](/eventsoccuring.png) |
+| 🌍 Destinations at PY    | ![Destinations](/destinationsatpy.png) |
 
 ---
 
 ## ✨ Features
 
 - 📍 Interactive display of French territories in India
-- 🗺️ Integrated with OpenStreetMap and Leaflet.js
-- ☁️ Weather Widget for live updates (API integration) (coming soon!)
-- 🎠 Carousel of featured destinations
-- 📅 Itinerary planning 
+- 🗺️ Real-time maps powered by **OpenStreetMap** and **Leaflet.js**
+- 🎠 Destination carousel with smooth transitions
+- 📅 Smart itinerary planner for custom trip schedules
+- ☁️ Weather widget integration for live updates *(coming soon!)*
+- 🔍 Search and filter destinations easily
+- 💬 Clean and responsive UI with React and Tailwind CSS
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-| Tech           | Description                          |
-|----------------|--------------------------------------|
-| React.js       | Frontend UI                          |
-| Tailwind CSS   | Styling                              |
-| Spring Boot    | Backend framework                    |
-| MongoDB        | NoSQL database                       |
-| OpenStreetMap  | Map integration                      |
-| Leaflet.js     | For rendering map UI                 |
-| Weather API    | 3rd-party weather info               |
+| Technology     | Role                              |
+|----------------|-----------------------------------|
+| React.js       | Frontend UI & Component Handling  |
+| Tailwind CSS   | Styling & Layout                  |
+| Spring Boot    | Backend REST APIs                 |
+| MongoDB        | NoSQL Data Storage                |
+| OpenStreetMap  | Interactive Map                   |
+| Leaflet.js     | Map Rendering                     |
+| Weather API    | External Weather Integration      |
 
 ---
 
-## 🔧 Folder Structure
+## 📁 Folder Structure (High-level)
 
+```bash
+/explore-petite-france/
+├── backend/
+│   ├── src/
+│   │   └── main/java/com/globalkin/...
+│   └── pom.xml
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── assets/
+│   │   └── App.jsx
+│   └── package.json
+├── README.md
+└── .gitignore
+```
+
+---
+
+## 📜 Project Summary
+
+This project demonstrates my ability to work with modern full-stack technologies and build scalable, user-centric applications. It combines **visual design**, **API integration**, and **real-time features** for an enriched user experience. Perfect for travel enthusiasts, local guides, or smart city planners.
+
+---
+
+## 🚀 Live Demo
+
+Live deployment is in progress. Stay tuned for updates!
+
+---
+
+## 👩‍💻 Author
+
+**Vagi**  
+📧 [vaginipy97@gmail.com](mailto:vaginipy97@gmail.com)  
+🔗 [GitHub: av-coder-hub](https://github.com/av-coder-hub)
+
+---
+
+## 🙌 Acknowledgments
+
+- [OpenStreetMap](https://www.openstreetmap.org/)
+- [Leaflet.js](https://leafletjs.com/)
+- [Weather APIs](https://openweathermap.org/)
+- My mentors and peers for continuous support 💙
